@@ -84,7 +84,7 @@ public class GeofencingGooglePlayServicesProvider implements GeofencingProvider,
         client.connect();
 
         pendingIntent = PendingIntent.getService(context, 0, new Intent(context, GeofencingService.class),
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_UPDATE_CURRENT || PendingIntent.FLAG_IMMUTABLE);
     }
 
     @Override
